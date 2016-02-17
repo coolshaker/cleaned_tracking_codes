@@ -172,7 +172,7 @@ def ssc_with_Adj_CC(file):
             ssc.get_adjacency(sub_matrix)
             ssc.manifold()
             # sub_labels,model = ssc.clustering_DPGMM(n_components=int(np.floor(sub_index.size/2)+1),alpha=0.1)
-            sub_labels, model = ssc.clustering_DPGMM(n_components=int(np.floor(sub_index.size / 4) + 1), alpha=0.1)
+            sub_labels, model = ssc.clustering_DPGMM(n_components=int(np.floor(sub_index.size / param_clusterindex) + 1), alpha=0.1)
 
             # pdb.set_trace()
             # visulize(ssc.embedding_,sub_labels,model,color)

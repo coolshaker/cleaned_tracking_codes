@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 def trj_filter(x, y, t, xspeed, yspeed, blob_index, mask, Numsample , minspdth = 15, fps=5):
 
-    transth  = 100*fps   #transition time (red light time) 100 secondss
+    transth  = 80*fps   #transition time (red light time) 100 secondss
     mask_re       = []
     x_re          = []
     y_re          = []
@@ -154,7 +154,7 @@ if __name__ == '__main__':
         
         
         print "Num of original samples is " , Numsample
-        mask_re, x_re, y_re, t_re, blob_index_re, xspd,yspd = trj_filter(x, y, t, xspeed, yspeed, blob_index, mask, Numsample , minspdth = 10, fps=fps)
+        mask_re, x_re, y_re, t_re, blob_index_re, xspd,yspd = trj_filter(x, y, t, xspeed, yspeed, blob_index, mask, Numsample , minspdth = param_mspeed, fps=fps)
         # print('initialization finished....')
         
         # delete all nan rows 

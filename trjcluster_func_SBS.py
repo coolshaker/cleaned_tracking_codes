@@ -44,14 +44,11 @@ def adj_thresholding_element(sxdiff, sydiff,mdis,dataSource):
         # dth    = 80
         # yspdth = 0.2 #filtered out 2/3 pairs
         # xspdth = 0.35 
-        dth    = 300
-        yspdth = 5
-        xspdth = 8
+        dth    = param_dist
+        yspdth = param_yspeed 
+        xspdth = param_xspeed
 
-    if dataSource =='DoT':
-        dth    = 300 #??!!!!
-        yspdth = 5 #y speed threshold
-        xspdth = 5 #x speed threshold
+
 
     if (sxdiff <xspdth ) & (sydiff<yspdth ) & (mdis < dth):
         adj_element = 1

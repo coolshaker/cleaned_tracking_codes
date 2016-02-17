@@ -30,7 +30,7 @@ if __name__ == '__main__':
     frame_idx_bias = 0 #johnson new
     #isVideo= False
     useBlobCenter = False
-    isVisualize = False
+    #isVisualize = False
     dataSource = 'Johnson'
     #dataPath = '/media/My Book/CUSP/AIG/Jay&Johnson/roi2/imgs/'
     #savePath = '/media/My Book/CUSP/AIG/Jay&Johnson/roi2/subSamp/klt/'
@@ -52,9 +52,9 @@ if __name__ == '__main__':
 
     """ Define the parameters of tracking algorithms """
     if dataSource == 'Johnson':
-        lk_params = dict(winSize=(5, 5), maxLevel=2, 
+        lk_params = dict(winSize=(param_winsize, param_winsize), maxLevel=2, 
                  criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03),flags = cv2.OPTFLOW_LK_GET_MIN_EIGENVALS) #maxLevel: level of pyramid
-        feature_params = dict(maxCorners=1000, qualityLevel=0.3, minDistance=3, 
+        feature_params = dict(maxCorners=1000, qualityLevel=param_qlevel, minDistance=3, 
                               blockSize=3)  #qualityLevel, below which dots will be rejected
 
     
