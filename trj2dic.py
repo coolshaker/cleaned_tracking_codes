@@ -367,7 +367,7 @@ if __name__ == '__main__':
     #trunclen         = 600
     isClustered      = True
     isAfterWarpping  = False
-    isVisualize      = False
+    #isVisualize      = False
     useVirtualCenter = True
     isLeft           = False
     isSave           = True

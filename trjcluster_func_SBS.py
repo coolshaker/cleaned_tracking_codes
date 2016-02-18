@@ -161,7 +161,7 @@ if __name__ == '__main__':
                 tmp1 = x[i,:]!=0
                 tmp2 = x[j,:]!=0
                 idx  = num[tmp1&tmp2]
-                if len(idx)>5: # has overlapping
+                if len(idx)>param_ovlpframes: # has overlapping
                 # if len(idx)>=30: # at least overlap for 100 frames
                     sidx   = idx[0:-1] # for speed
                     sxdiff = np.mean(np.abs(xspd[i,sidx]-xspd[j,sidx]))

@@ -29,7 +29,7 @@ isVisualize = False #visualization or not
 param_mspeed = 5 #minimum speed
 execfile("trj_filter.py") #output to filtered folder
 
-param_dist = 250 #dth    = 100
+param_dist = 200 #dth    = 100
 param_yspeed = 5 #yspdth = 2
 param_xspeed = 10 #xspdth = 4
 execfile("trjcluster_func_SBS.py") #output to adj folder

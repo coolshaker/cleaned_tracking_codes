@@ -211,7 +211,7 @@ if __name__ == '__main__':
 
 	test_vctime,test_vcxtrj,test_vcytrj,image_list,savePath = prepare_data(isAfterWarpping,dataSource,isLeft)
 	obj_pair = TrjObj(test_vcxtrj,test_vcytrj,test_vctime)
-	badkeys  = obj_pair.bad_IDs1+obj_pair.bad_IDs2 # 3 for north-south video 4 for 
+	badkeys  = obj_pair.bad_IDs1+obj_pair.bad_IDs2+obj_pair.bad_IDs4 # 3 for north-south video 4 for west-east video
 	clean_vctime = {}
 	clean_vcxtrj = {}
 	clean_vcytrj = {}

@@ -4,9 +4,10 @@ import numpy as np
 from pylab import *
 import cPickle as pickle
 
-#videoPath="D:/AIG Video Processing/Jay_Fulton/00016_ROI.avi"#define the path of video or images
-#outputPath="D:/AIG Video Processing/Jay_Fulton/Output/"
-#subSampRate=5
+videoIndex=16
+videoPath="D:/AIG Video Processing/Jay_Fulton_mask/"+"000"+str(videoIndex)+"_ROI.avi"#define the path of video or images
+outputPath="D:/AIG Video Processing/Jay_Fulton_mask/Output"+str(videoIndex)+"/"
+subSampRate=5
 
 vctime  = pickle.load( open( outputPath+"ssc/final_vctime.p", "rb" ) )
 vcxtrj  = pickle.load( open( outputPath+"ssc/final_vcxtrj.p", "rb" ) )
@@ -41,7 +42,7 @@ colorList={}#random color
 for vehID in vctime.keys():
 	colorList[vehID]=np.random.rand(3,1)
 
-startFrame=3000
+startFrame=800
 endFrame=6000
 cap         = cv2.VideoCapture(videoPath)
 st,firstfrm = cap.read()
@@ -55,7 +56,7 @@ plt.axis('off')
 plt.ion()
 
 #cap.set (cv2.CAP_PROP_POS_FRAMES,0)
-for frame_idx in range(startFrame,endFrame):
+for frame_idx in range(startFrame,endFrame,1):
 	
 	cap.set (cv2.CAP_PROP_POS_FRAMES,frame_idx*subSampRate)
 	 
