@@ -26,22 +26,22 @@ for videoIndex in range(16,17):
 	param_winsize=10 #search window size
 	param_qlevel = 0.5 #qualityLevel
 	isVisualize = False #visualization or not 
-	#execfile("klt_func.py") #output "klt_XXX.mat" to output folder
+	execfile("klt_func.py") #output "klt_XXX.mat" to output folder
 
 	#Step 2. Delete low speed fatures 
 	param_mspeed = 4 #minimum speed threshold
-	#execfile("trj_filter.py") #output .mat to filtered folder
+	execfile("trj_filter.py") #output .mat to filtered folder
 
 	#Step 3. Find the connected components
 	param_ovlpframes=15 #overlapped frame number
 	param_dist = 45 #average distant differnce threshold
 	param_yspeed = 2 #average yspeed difference threshold
 	param_xspeed = 4 #average xspeed difference threshold
-	#execfile("trjcluster_func_SBS.py") #output .mat to adj folder
+	execfile("trjcluster_func_SBS.py") #output .mat to adj folder
 
 	#Step 4. Subspace clustering with Dirichlet process mixture model: first reduce the dimension of the data then do the clustering
 	param_clusterindex=4 #greater value result in less clusters
-	#execfile("subspace_cluster.py") #output "00X.mat" to ssc folder 
+	execfile("subspace_cluster.py") #output "00X.mat" to ssc folder 
 
 	#Step 5. Compile trajectories in different trunks 
 	execfile("unify_label_func.py") #output "Complete_result.mat" to ssc folder
@@ -51,6 +51,6 @@ for videoIndex in range(16,17):
 	execfile("trj2dic.py") #output pickle files to ssc folder 
 
 	#Step 7. Pair vehicles 
-	#execfile('getVehiclesPairs.py') #output csv files to Output folder
+	execfile('getVehiclesPairs.py') #output csv files to Output folder
 
 
